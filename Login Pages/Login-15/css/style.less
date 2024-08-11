@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "avenir-book";
+    src: url("../font/avenir-book.ttf");
+}
+@font-face {
+    font-family: "avenir-medium";
+    src: url("../font/avenir-medium.ttf");
+}
+@font-face {
+    font-family: "avenir-roman";
+    src: url("../font/avenir-roman.otf");
+}
+@font-face {
+    font-family: "p-light";
+    src: url("../font/p-light.ttf");
+}
+@font-face {
+    font-family: "p-medium";
+    src: url("../font/p-medium.ttf");
+}
+@font-face {
+    font-family: "p-regular";
+    src: url("../font/p-regular.ttf");
+}
+@font-face {
+    font-family: "p-semibold";
+    src: url("../font/p-semibold.ttf");
+}
+.screen {
+    width: 100%;
+    height: 100svh;
+    user-select: none;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.logo:hover {
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.3);
+}
+.link {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .dark {
+        color: #111111;
+    }
+    a {
+        font-family: "p-regular";
+        font-size: 16px;
+        color: rgba(102, 102, 102, 0.8);
+        text-decoration: none;
+        padding: 8px;
+    }
+    a:hover {
+        color: #111111;
+    }
+}
+.button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .language {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        font-family: "p-regular";
+        font-size: 16px;
+        color: #333333;
+        .img {
+            border: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .log-in {
+        border: 1px inset #111111;
+        border-radius: 8px;
+        padding: 8px 25px;
+        font-family: "p-regular";
+        font-size: 16px;
+        color: #111111;
+        transition: background linear 0.2s;
+    }
+    .log-in:hover {
+        background: #111111;
+        color: #fff;
+    }
+}
+button {
+    cursor: pointer;
+    background: unset;
+}
+.login {
+    background-image: url(../img/login.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sign {
+    background: #fff;
+    padding: 42px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        &__big {
+            font-family: "p-medium";
+            font-size: 40px;
+            color: #333333;
+        }
+        &__small {
+            color: rgba(102, 102, 102, 0.8);
+            font-family: "p-regular";
+            font-size: 16px;
+            a {
+                font-family: "p-regular";
+                color: #111111;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+.input {
+    width: 100%;
+    label {
+        display: block;
+        color: #666666;
+        font-family: "p-regular";
+        font-size: 16px;
+    }
+    input {
+        width: 100%;
+        border: 1px inset rgba(102, 102, 102, 0.35);
+        border-radius: 12px;
+        padding: 15px;
+        outline: unset;
+    }
+    input:focus {
+        border: 1px inset #111111;
+    }
+}
+.between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .hide {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: unset;
+        background: transparent;
+        color: rgba(102, 102, 102, 0.8);
+        font-family: "p-regular";
+        font-size: 16px;
+    }
+    .hide:hover {
+        color: #111111;
+    }
+    .hide:hover img {
+        filter: brightness(0) invert(0);
+    }
+}
+.forget {
+    font-family: "p-medium";
+    font-size: 16px;
+    color: #111111;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+.forget:hover {
+    text-decoration: underline;
+}
+.click {
+    border-radius: 32px;
+    background: rgba(17, 17, 17, 0.25);
+    padding: 13px 210px;
+    border: unset;
+    font-family: "p-medium";
+    font-size: 20px;
+    color: #fff;
+    transition: background linear 0.2s;
+}
+.click:hover {
+    background: #333333;
+}
+.social {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 13px;
+    &__border {
+        border-radius: 40px;
+        border: 1px solid #333333;
+        padding: 12px 39px;
+        display: block;
+    }
+    &__border:hover {
+        background: rgba(17, 17, 17, 0.25);
+        border: 1px solid rgba(17, 17, 17, 0.25);
+    }
+}
+.lock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 32px;
+    border: 1px solid #333333;
+    padding: 14px 0;
+    width: 100%;
+    font-family: 'p-regular';
+    font-size: 18px;
+    color: #111111;
+}
+.lock:hover {
+    background: rgba(17, 17, 17, 0.25);
+    border: 1px solid rgba(17, 17, 17, 0.25);
+    color: #fff;
+}
+.none {
+    display: none;
+}
