@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cgray: '#666666',
+                        cblack: '#111111',
+                        title: '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .input:checked {
+                background-image: url('./img/check.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main
+        class="bg-cover h-svh bg-center bg-[url('./img/img.jpg')] bg-no-repeat relative flex items-center justify-center">
+        <a href="#" class="size-16 overflow-hidden inline-block rounded-full top-[40px] left-[40px] absolute"><img
+                src="./img/logo.svg" alt=""></a>
+        <div class="flex bg-white rounded-3xl py-20 px-10 relative w-[539px]  overflow-hidden">
+            <button class="absolute top-6 right-6"><img src="./img/not.svg" alt=""></button>
+            <div class="flex flex-col gap-y-[64px]">
+                <form class="flex flex-col gap-y-8">
+                    <div class="text-[32px] poppins-medium text-title select-none">Sign in</div>
+                    <div class="w-full">
+                        <label for="email" class="poppins-regular text-base text-cgray">Email or phone
+                            number</label><br>
+                        <input type="email, tel" name="email" id="email"
+                            class="rounded-xl ring-1 ring-inset ring-cgray/35 px-[10px] py-[5px] w-full h-[46px] outline-none">
+                    </div>
+                    <div class="w-full">
+                        <label for="password"
+                            class="poppins-regular text-base text-cgray flex items-center justify-between -mb-5">
+                            <span>Password</span>
+                            <button class="flex gap-2 items-center  hover:text-cblack hover:scale-[1.1] group">
+                                <img src="./img/hide.svg" alt="" class="group-hover:brightness-0">
+                                Hide
+                            </button>
+                        </label><br>
+                        <input type="password" name="password" id="password"
+                            class="rounded-xl ring-1 ring-inset ring-cgray/35 px-[10px] py-[5px] w-full h-[46px] outline-none">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <button
+                            class="rounded-[32px] bg-cgray w-full pt-[14px] pb-[15px] text-white poppins-regular text-lg hover:bg-cblack">Sign
+                            in</button>
+                        <div class="flex items-center justify-between py-2">
+                            <div class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" name="checkbox" id="checkbox" checked
+                                    class="relative size-5 bg-white rounded-sm appearance-none cursor-pointer input ring-1 ring-inset ring-cblack">
+                                <label for="checkbox" class="cursor-pointer select-none">Remember me</label>
+                            </div>
+                            <a href="#" class="poppins-regular text-base text-title hover:scale-[1.1] inline-block hover:text-cblack">Need help?</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="flex flex-col gap-y-2 pr-20 poppins-regular text-base text-cgray select-none">
+                    <div>Don’t have an acount? <a href="#" class="poppins-medium text-cblack underline hover:scale-[1.1] inline-block">Sign up</a>
+                    </div>
+                    <div>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#"
+                            class="poppins-medium text-cblack underline hover:scale-[1.1] inline-block">Learn more.</a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
