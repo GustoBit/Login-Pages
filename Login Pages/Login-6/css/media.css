@@ -1,0 +1,28 @@
+@media (max-width: 500px) {
+    .bottom {
+        flex-direction: column;
+    }
+    .screen .bottom a {
+        text-decoration: underline;
+    }
+    .screen a {
+        text-decoration: underline;
+    }
+    .surname {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .sign {
+        gap: 20px;
+        padding: 20px;
+    }
+    .form {
+        gap: 20px;
+    }
+    .join {
+        gap: 10px;
+    }
+    .form .google {
+        padding: 15px 110px;
+    }
+}
