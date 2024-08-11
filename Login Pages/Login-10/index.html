@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        threeblack: '#333333',
+                        cgray: '#666666',
+                        cblack: '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main
+        class="bg-cover w-full  h-svh bg-center bg-[url('./img/img.jpg')] bg-no-repeat flex items-center justify-center">
+
+        <div
+            class="flex flex-col gap-y-8 bg-white rounded-3xl py-[48px] px-[30px] relative overflow-hidden items-center justify-center w-[420px]">
+
+            <button class="absolute top-4 right-4"><img src="./img/not.svg" alt=""></button>
+
+            <form class="flex flex-col gap-4 items-center w-[360px]">
+                <div class="poppins-medium text-[28px] select-none">Welcome back, Mika</div>
+                <a href="#" class="size-20 rounded-full overflow-hidden">
+                    <img src="./img/logo.svg" alt="">
+                </a>
+                <a href="#"
+                    class="flex gap-4 items-center py-[18px] ring-1 ring-inset ring-threeblack rounded-[40px]  w-full justify-center hover:bg-emerald-700 group">
+                    <img src="./img/google.svg" alt="">
+                    <span class="avenir-roman text-lg text-threeblack group-hover:text-white">Continue with Google</span>
+                </a>
+            </form>
+
+            <div class="h-[1px] w-full bg-cgray/25"></div>
+
+            <div class="w-[324px] poppins-medium text-base text-cblack text-center flex flex-col gap-y-2">
+                Not yout? Log in with a different account <div>Need an account?
+                    <a href="#" class="underline hover:scale-[1.1] inline-block">Sign up</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
