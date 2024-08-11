@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cgreen: '#00C0A6',
+                        cgray: '#666666',
+                        cblack: '#111111',
+                        threeblack: '#333333',
+                        cpurple: '#505ABB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="bg-cover bg-[url('./img/img.jpg')] h-svh bg-center flex items-center justify-center">
+        <form class="bg-white rounded-3xl p-[48px] relative ">
+            <button class="absolute top-4 right-4"><img src="./img/not.svg" alt=""></button>
+            <div class="flex flex-col gap-y-[48px] items-center">
+                <div class="poppins-medium text-[32px] text-threeblack select-none ">Log in or sign up</div>
+                <form class="flex flex-col">
+                    <div class="w-full flex flex-col gap-y-4">
+                        <div>
+                            <label for="email" class="poppins-regular text-base text-cgray">Email</label> <br>
+                            <input type="text" name="email" id="email"
+                                class="w-full rounded-xl ring-1 ring-inset ring-cgray/35 p-[15px] outline-none"
+                                required>
+                        </div>
+                        <button
+                            class="py-[15px] w-full bg-cgray/50 rounded-[32px] poppins-medium text-[22px] text-white hover:bg-cgray/75">Continue</button>
+                    </div>
+                </form>
+                <div class="flex items-center gap-[23px] select-none w-full">
+                    <div class="h-[1px] w-full bg-cgray/25"></div>
+                    <div class="text-cgray avenir-roman text-[20px]">OR</div>
+                    <div class="h-[1px] w-full bg-cgray/25"></div>
+                </div>
+                <div class="flex flex-col gap-y-3 items-center text-[22px] avenir-roman text-threeblack w-full">
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 w-full ring-1 ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/facebook.svg" alt="">
+                        Continue with Facebook
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 ring-1 w-full ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/google.svg" alt="">
+                        Continue with Google
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 ring-1 w-full ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/apple.svg" alt="">
+                        Continue with Apple
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 ring-1 w-full ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/phone.svg" alt="">
+                        Continue with phone
+                    </a>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
