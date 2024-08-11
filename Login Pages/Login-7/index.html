@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cblack: '#111111',
+                        cgray: '#666666',
+                        cgreen: '#00C0A6',
+                        ring: '#A6A6A6'
+                    },
+                    backgroundImage: {
+                        'hero': "url('./img/Image.jpg')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .height {
+            height: calc(100vh - 74px);
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="bg-cover h-svh bg-center bg-[url('./img/Image.jpg')] bg-no-repeat">
+        <nav class="bg-white py-[17px] px-10 relative z-10">
+            <div class="flex items-center">
+                <a href="#" class="flex overflow-hidden rounded-full"><img src="./img/man.svg" alt=""></a>
+                <div class="flex items-center gap-10 ml-10 pt-2 poppins-regular text-base text-cgray hover:text-cblack">
+                    <a href="#" class="poppins-medium text-base text-cblack hover:text-cblack">Home</a>
+                    <a href="#" class="">Web designs</a>
+                    <a href="#" class="">Mobile designs</a>
+                    <a href="#" class="">Illustrations</a>
+                </div>
+                <form class="flex items-center gap-4 ml-auto">
+                    <div class="flex gap-2 py-2 px-4 ring-1 ring-inset ring-cgray rounded-2xl w-[110px]">
+                        <img src="./img/search.svg" alt="search">
+                        <input type="text" name="search" placeholder="Search" class="outline-none w-full" required>
+                    </div>
+                    <button
+                        class="pt-[7.5px] pb-[8.5px] px-[19px] ring-1 ring-inset ring-cblack rounded-lg poppins-regular text-base text-cblack hover:bg-cgreen hover:ring-0 hover:text-white">Sign
+                        up</button>
+                    <button
+                        class="pt-[7.5px] pb-[8.5px] px-[19px] ring-1 ring-inset ring-cblack rounded-lg poppins-regular text-base text-cblack hover:bg-cgreen hover:ring-0 hover:text-white">Sign
+                        in</button>
+                </form>
+            </div>
+        </nav>
+        <div class="contain">
+            <div class="py-[112px] px-[64px] mt-[100px] w-[761px]">
+                <div>
+                    <div class="poppins-semibold text-5xl leading-16 text-white mb-[6px] select-none">Say hello to the
+                        world</div>
+                    <p class="poppins-regular text-2xl text-white mb-8 select-none">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis maximus nunc, ac rhoncus
+                        odio congue quis. Sed
+                        ac semper orci, eu porttitor lacus.
+                    </p>
+                    <button
+                        class="w-[269px] rounded-[32px] py-[15px] px-[50px] bg-cgreen poppins-medium text-[22px] text-white hover:bg-lime-900 mb-[64px]">Sign
+                        up for free</button>
+                    <div class="flex gap-6">
+                        <a href="#"
+                            class="block px-4 pt-[9px] pb-[6px] bg-black rounded-lg w-[180px] ring-1 ring-ring shadow-[0_4px_4px_0_rgba(0,0,0,.25)] hover:bg-cgreen hover:ring-white">
+                            <span class="flex items-center gap-3">
+                                <img src="./img/apple.svg" alt="">
+                                <img src="./img/word-apple.svg" alt="">
+                            </span>
+                        </a>
+                        <a href="#"
+                            class="block px-4 pt-[9px] pb-[6px] bg-black rounded-lg w-[180px] ring-1 ring-ring shadow-[0_4px_4px_0_rgba(0,0,0,.25)] hover:bg-cgreen hover:ring-white">
+                            <span class="flex items-center gap-3">
+                                <img src="./img/google.svg" alt="">
+                                <img src="./img/google-word.svg" alt="">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
