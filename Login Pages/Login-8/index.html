@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cgreen: '#00C0A6',
+                        cgray: '#666666',
+                        cblack: '#111111',
+                        threeblack: '#333333',
+                        cpurple: '#505ABB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <nav class="bg-white py-[20px] px-10 relative z-10">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex overflow-hidden rounded-full"><img src="./img/logo.svg" alt=""></a>
+                <div class="flex gap-2 py-2 px-4 ring-1 ring-inset ring-cgray rounded-2xl w-[110px]">
+                    <img src="./img/search.svg" alt="search">
+                    <input type="text" name="search" placeholder="Search" class="outline-none w-full" required>
+                </div>
+            </div>
+        </nav>
+        <section class="bg-white">
+            <div class="contain">
+                <div class="pt-[211px]">
+                    <div class="flex gap-[52px] items-center">
+                        <div class="flex flex-col gap-y-[64px] w-[531px] h-[529px]">
+                            <div class="flex flex-col gap-y-4">
+                                <div class="poppins-bold text-5xl leading-[68px] text-cblack">Design with us to <br> unlock your creativity</div>
+                                <div class="poppins-regular text-[28px] leading-[40px] text-cgray">Access to thousands of design resources and templates</div>
+                            </div>
+                            <div class="flex flex-col gap-y-6">
+                                <a href="#"
+                                    class="flex gap-4 items-center px-[100px] py-4 ring-1 ring-inset ring-threeblack rounded-[40px] hover:bg-cgreen group">
+                                    <img src="./img/google.svg" alt="">
+                                    <span class="avenir-roman text-lg text-threeblack group-hover:text-white">Sign up
+                                        with your Google
+                                        account</span>
+                                </a>
+                                <div class="flex gap-[18px] items-center">
+                                    <div class="w-full bg-cgray/25 h-[1px] ring-1 ring-cgray/25 rounded-full"></div>
+                                    <div class="text-cgray/45 avenir-roman text-lg">OR</div>
+                                    <div class="w-full bg-cgray/25 h-[1px] ring-1 ring-cgray/25 rounded-full"></div>
+                                </div>
+                                <form class="flex flex-col gap-2">
+                                    <div class="flex gap-[6px]">
+                                        <input type="email" name="email" placeholder="Email address" required
+                                            class="pt-[15px] pb-[17px] pl-6 w-full ring-1 ring-inset ring-black rounded-lg outline-none">
+                                        <button
+                                            class="pt-[12.5px] pb-[13.5px] px-[44px] rounded-lg bg-cpurple poppins-medium text-xl text-white w-[163px] flex-1 whitespace-nowrap hover:bg-indigo-700">Sign
+                                            up</button>
+                                    </div>
+                                    <div class="poppins-regular text-base text-cgray/50">By signing up, you agree to the
+                                        <a href="#" class="text-cblack underline">Terms of use</a> and <a href="#"
+                                            class="text-cblack underline">Privacy Policy.</a></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/img.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
