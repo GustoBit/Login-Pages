@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cgreen: '#00C0A6',
+                        cgray: '#666666',
+                        cblack: '#111111',
+                        threeblack: '#333333',
+                        cpurple: '#505ABB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="bg-contain bg-[url('./img/img.jpg')] h-svh bg-center flex items-center justify-center">
+        <form class="bg-white rounded-3xl p-[48px] relative">
+            <button class="absolute top-4 right-4"><img src="./img/not.svg" alt=""></button>
+            <div class="flex flex-col gap-y-6 w-[448px] items-center">
+                <div class="flex flex-col gap-4 items-center">
+                    <a href="#" class="overflow-hidden size-12 rounded-full"><img src="./img/logo.svg" alt=""></a>
+                    <div
+                        class="flex flex-col gap-[2px] poppins-medium text-[32px] leading-[41px] text-cblack items-center text-center select-none">
+                        Unlimited free access <br> to our resourses
+                        <span class="poppins-regular text-base text-threeblack">Sign up to see more</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-3 items-center text-[22px] avenir-roman text-threeblack">
+                    <a href="#"
+                        class="rounded-[40px] bg-cblack px-[98px] py-4 text-white poppins-regular flex items-center justify-center w-[416px]">
+                        Continue with email
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 w-[416px] ring-1 ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                    hover:ring-0 hover:bg-cblack hover:poppins-regular">
+                        <img src="./img/facebook.svg" alt="">
+                        Continue with Facebook
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 w-[416px] ring-1 ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                    hover:ring-0 hover:bg-cblack hover:poppins-regular">
+                        <img src="./img/google.svg" alt="">
+                        Continue with Google
+                    </a>
+                </div>
+                <div class="text-cgray w-[340px] text-sm poppins-regular select-none">
+                    By continuing, you agree to the <a href="#"
+                        class="text-threeblack underline hover:scale-[1.1] inline-block">Terms of Service</a> <br>
+                    and acknowledge you’ve read our <a href="#"
+                        class="text-threeblack underline hover:scale-[1.1] inline-block">Privacy Policy.</a>
+                </div>
+            </div>
+            <div class="poppins-regular text-base text-threeblack select-none text-center mt-8">Already a remember? <a href="#" class="text-cblack underline inline-block hover:scale-[1.1]">Log in</a></div>
+        </form>
+    </main>
+</body>
+
+</html>
