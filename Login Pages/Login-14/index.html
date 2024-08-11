@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cgreen: '#00C0A6',
+                        cgray: '#666666',
+                        cblack: '#111111',
+                        threeblack: '#333333',
+                        cpurple: '#505ABB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="bg-cover bg-[url('./img/img.jpg')] h-svh bg-center flex items-center justify-center">
+        <form class="bg-white rounded-3xl px-8 py-10 relative w-[580px]">
+            <button class="absolute top-4 right-4"><img src="./img/not.svg" alt=""></button>
+
+            <div class="flex flex-col gap-y-[32px]">
+                <div class="flex flex-col gap-2 select-none">
+                    <a href="#" class="size-10 rounded-full overflow-hidden inline-block"><img src="./img/logo.svg"
+                            alt=""></a>
+                    <div class="poppins-medium text-[32px] text-threeblack">Welcome back!</div>
+                    <p class="poppins-light text-base text-cgray">Pleae enter your phone number. You will receive a text
+                        message to verify your account. Message & data rates may apply.</p>
+                </div>
+                <form class="flex flex-col">
+                    <div class="w-full flex flex-col gap-y-4">
+                        <div>
+                            <label for="phone" class="poppins-regular text-base text-cgray">Phone number</label> <br>
+                            <div class="flex p-[10px] gap-2 ring-1 ring-cgray/35 ring-inset rounded-xl">
+                                <img src="./img/usa.svg" alt="">
+                                <select name="flag" id="flag">
+                                    <option value="flag"><img src="./img/usa.svg" alt=""></option>
+                                </select>
+                                <input type="text" id="phone" name="phone" placeholder="+1" class="p-[5px] w-full outline-none">
+                            </div>
+                        </div>
+                        <button
+                            class="py-[15px] w-full bg-cgray/50 rounded-[32px] poppins-medium text-[22px] text-white hover:bg-cgray/75">Continue</button>
+                    </div>
+                </form>
+                <div class="flex items-center gap-[23px] select-none w-full">
+                    <div class="h-[1px] w-full bg-cgray/25"></div>
+                    <div class="text-cgray avenir-roman text-[20px]">OR</div>
+                    <div class="h-[1px] w-full bg-cgray/25"></div>
+                </div>
+                <div class="flex flex-col gap-y-3 items-center text-[22px] avenir-roman text-threeblack w-full">
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 w-full ring-1 ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/facebook.svg" alt="">
+                        Continue with Facebook
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 ring-1 w-full ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/google.svg" alt="">
+                        Continue with Google
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 ring-1 w-full ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/apple.svg" alt="">
+                        Continue with Apple
+                    </a>
+                    <a href="#" class="rounded-[40px] px-[98px] py-4  flex items-center justify-center gap-4 ring-1 w-full ring-inset ring-threeblack whitespace-nowrap hover:text-white
+                                    hover:ring-0 hover:bg-cgray hover:poppins-regular">
+                        <img src="./img/phone.svg" alt="">
+                        Continue with phone
+                    </a>
+                </div>
+                <div class="poppins-regular text-base text-cgray">Already have an ccount? <a href="#"
+                        class="text-cblack underline hover:scale-[1.1] inline-block">Log in</a></div>
+            </div>
+
+        </form>
+    </main>
+</body>
+
+</html>
